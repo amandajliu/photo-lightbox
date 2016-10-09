@@ -1,1 +1,30 @@
+<html>
 <h1>Photo Lightbox Challenge</h1>
+<link rel="stylesheet" href="index.css">
+
+<script>
+  function jsonFlickrApi(rsp) {
+    if (rsp.stat != "ok") {
+      return;
+    }
+    const photoDiv = document.createElement("div");
+    photoDiv.setAttribute("id", "photos");
+    let photo;
+    let photo_url;
+    for (var i=0; i < rsp.photos.photo.length; i++) {
+      photo = rsp.photos.photo[i];
+      photo_url = "http://farm" + photo.farm + ".static.flickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + "_" + "t.jpg";
+
+      var photoImg = document.createElement("img");
+      photoImg.setAttribute("src", photo_url);
+      photoDiv.appendChild(photoImg);
+
+    }
+
+    document.body.appendChild(photoDiv);
+  }
+</script>
+<script src="https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=97b81ffeb59399054b1158b41724d7a3&tags=flower&per_page=20&media=photos&format=json"></script>
+<script src="lightbox.js"></script>
+
+</html>
