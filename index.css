@@ -6,6 +6,8 @@
    -moz-column-gap:      5px;
    column-count:         5;
    column-gap:           10px;
+   margin-left: 5em;
+   margin-right: 5em;
 
 }
 
@@ -13,6 +15,12 @@
   width: 100% !important;
   height: auto !important;
   margin-top: 10px;
+  border-radius:3%;
+  cursor:pointer;
+}
+
+#photos img:hover {
+  box-shadow: 5px 5px 2px #888888;
 }
 
 @media (max-width: 1200px) {
@@ -46,6 +54,60 @@
 
 body {
   margin: 0;
-  padding:5em;
+  padding:0;
+  font-family: Trebuchet MS;
+}
 
+.lightbox {
+  z-index:100;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  border-radius:3%;
+}
+
+.overlay {
+  z-index:50;
+  position:absolute;
+  height:100%;
+  width:100%;
+  opacity:0.9;
+  background-color:black;
+  display: none;
+}
+
+.closeButton {
+  background-color: white;
+  color: black;
+  z-index: 101;
+  left: 101%;
+  position:absolute;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.arrow {
+  z-index: 101;
+  position: absolute;
+  background-color:white;
+  color: black;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+#leftarrow {
+  top: 45%;
+  left: -35px;
+  display: none;
+}
+
+#rightarrow {
+  top: 45%;
+  left: 100%;
+  margin-left: 20px;
+  display: none;
 }
