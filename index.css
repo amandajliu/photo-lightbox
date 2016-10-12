@@ -20,7 +20,7 @@
 }
 
 #photos img:hover {
-  box-shadow: 5px 5px 2px #888888;
+  box-shadow: 5px 5px 2px #656565;
 }
 
 @media (max-width: 1200px) {
@@ -100,14 +100,21 @@ body {
 }
 
 #leftarrow {
-  top: 45%;
-  left: -35px;
+  top: 25%;
+  left: -60px;
   display: none;
+  font-size: 70px;
 }
 
 #rightarrow {
-  top: 45%;
-  left: 100%;
+  top: 25%;
+  left: 105%;
   margin-left: 20px;
   display: none;
+  font-size: 70px;
+}
+
+.arrow:hover, .closeButton:hover {
+  color: white;
+  background-color: #858585;
 }

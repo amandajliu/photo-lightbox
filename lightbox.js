@@ -12,7 +12,7 @@ for (var i=0; i < images.length; i ++ ){
     imgDiv.style.marginLeft = -this.offsetWidth/2;
 
     var closeButton = document.createElement("span");
-    closeButton.innerHTML = "&times";
+    closeButton.innerHTML = "<b>&times</b>";
     closeButton.setAttribute("class", "closeButton");
 
     //arrows
