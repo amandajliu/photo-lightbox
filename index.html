@@ -1,5 +1,4 @@
 <html>
-<h1>Photo Lightbox Challenge</h1>
 <link rel="stylesheet" href="index.css">
 <div class="overlay"></div>
 <script>
@@ -19,6 +18,7 @@
       photoImg.setAttribute("src", photo_url);
       photoImg.setAttribute("imgNum", i.toString());
       photoImg.setAttribute("class", "gridImg");
+      photoImg.setAttribute("title", photo.title);
       photoDiv.appendChild(photoImg);
 
     }
@@ -26,7 +26,8 @@
     document.body.appendChild(photoDiv);
   }
 </script>
-<script src="https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=97b81ffeb59399054b1158b41724d7a3&tags=flower&per_page=15&media=photos&format=json"></script>
+
+<script src="https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=97b81ffeb59399054b1158b41724d7a3&gallery_id=72157662201152639&per_page=30&format=json"></script>
 <script src="lightbox.js"></script>
 
 </html>

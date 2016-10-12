@@ -118,3 +118,11 @@ body {
   color: white;
   background-color: #858585;
 }
+
+.imgTitle {
+  top: -50px;
+  color: white;
+  position: absolute;
+  padding: 3px;
+  text-align: center;
+}
